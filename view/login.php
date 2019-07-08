@@ -5,7 +5,7 @@
 	<title>Login</title>
 </head>
 <body>
-<form action="../validar.php" method="post">
+<form action="../model/validar.php" method="post">
 
 			<table border="0">
 

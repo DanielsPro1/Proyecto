@@ -11,7 +11,7 @@ if (empty($_SESSION['id'])) {
 }
 				
 
-				require("../conexion/connect.php");
+			
 
 	
 //la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");

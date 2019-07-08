@@ -5,7 +5,7 @@ if (empty($_POST['pass'])) {
 	echo "<script>location.href='index.php'</script>";
 }
 session_start();
-	require("conexion/connect.php");
+	require("../conexion/connect.php");
 
 	$username=$_POST['mail'];
 	$pass=$_POST['pass'];
@@ -17,11 +17,11 @@ session_start();
 			$_SESSION['user']=$f['user'];
 			
 
-			header("Location: index2.php");
+			header("Location: ../view/index2.php");
 		}else{
 			echo '<script>alert("CONTRASEÑA INCORRECTA")</script> ';
 		
-			echo "<script>location.href='index.php'</script>";
+			echo "<script>location.href='../index.php'</script>";
 		}
 	}else{
 		
