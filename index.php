@@ -14,28 +14,36 @@
 <header>
 <h1>proyecto</h1>
 </header>
-<div class="container">
-<main>
-<section>
-<?php 
-  require("conexion/connect.php");
-  include("view/mostrar.php");
-?>
-</section>
 
-</main>
-
-<aside>
-<button><a href="view/login.php">Iniciar sesion</button>
-<button> <a href="view/register.php">Registrar </button>
-</aside>
+<div class="container-fluid">
 
 
+	<div class="row">
+	     
+		<div class="col-md-9">
+			 
+		<?php 
+     require("conexion/connect.php");
+      include("view/mostrar.php");
+        ?>
+			
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3">
+			<button type="button" class="btn btn-secondary" >
+            <a href="view/login.php">Iniciar sesion
+			</button> 
+			<br>
+			<br>
+			<button type="button" class="btn active btn-secondary">
+            <a href="view/register.php">Registrar 
+			</button>
+
+			</div>
+		</div>
+	</div>
 </div>
-
-
-
-
 </center>
 
 

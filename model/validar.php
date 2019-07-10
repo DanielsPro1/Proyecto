@@ -2,7 +2,7 @@
 <?php
 
 if (empty($_POST['pass'])) {
-	echo "<script>location.href='index.php'</script>";
+	echo "<script>location.href='../view/login.php'</script>";
 }
 session_start();
 	require("../conexion/connect.php");
@@ -21,7 +21,7 @@ session_start();
 		}else{
 			echo '<script>alert("CONTRASEÑA INCORRECTA")</script> ';
 		
-			echo "<script>location.href='../index.php'</script>";
+			echo "<script>location.href='../view/login.php.'</script>";
 		}
 	}else{
 		

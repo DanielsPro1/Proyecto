@@ -11,7 +11,7 @@
 <body >		
 <!-- formulario registro -->
 
-<form method="post" action="" >
+<form method="post" action="login.php" >
   <fieldset>
     <legend  style="font-size: 18pt"><b>  Registro</b></legend>
     <div class="form-group">
@@ -40,7 +40,7 @@
       </div> 
     
     <input  type="submit" name="submit" value=" Registrarse"  />
-    <div><button> <a href="../index.php">Regresar</button></div>
+    <div><button> <a href="../index.php">cancelar</button></div>
 
   </fieldset>
 </form>

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-
+<?php
+session_start();
+if (@!$_SESSION['user']) {
+	header("Location:model/index.php");
+}
+?>		
 
 <html lang="es">
 <head>
@@ -27,7 +32,8 @@
       <td>
         texto:<label for="comentario"></label>
      </td>
-      <td><textarea name="comentario" id="comentario" rows="10" cols="50" value="<?php echo "publicacion"?>"></textarea>
+      <td><textarea name="comentario" id="comentario" rows="10" cols="50" value="
+      <?php echo "publicacion"?>"></textarea>
      </td>
   
 </tr>
@@ -36,7 +42,7 @@
  <tr>
     <td >  
       <input type="submit" name="submit" id="btn_enviar" value="Enviar">
-      <button><a href="index2.php">regresar</a></button>
+      <a href="index2.php">regresar</a>
     </td>
   </tr>
    
