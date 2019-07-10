@@ -6,6 +6,7 @@
 	 
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<title>Proyecto academias</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body >		
 <!-- formulario registro -->
@@ -38,14 +39,14 @@
       <input type="direccion" name="direccion"  placeholder=" Ingresar direccion" />
       </div> 
     
-    <input  class="btn btn-danger" type="submit" name="submit" value=" Registrarse"/>
+    <input  type="submit" name="submit" value=" Registrarse"  />
+    <div><button> <a href="../index.php">Regresar</button></div>
 
   </fieldset>
 </form>
 </div>
 
-
-		<?php
+  <?php
      if(isset($_POST['submit'])){
       require("../model/save.php");
     }
