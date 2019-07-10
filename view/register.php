@@ -11,7 +11,7 @@
 <body >		
 <!-- formulario registro -->
 
-<form method="post" action="login.php" >
+<form method="post" action="" >
   <fieldset>
     <legend  style="font-size: 18pt"><b>  Registro</b></legend>
     <div class="form-group">
@@ -50,6 +50,8 @@
      if(isset($_POST['submit'])){
       require("../model/save.php");
     }
+
+    
     ?>
 		
 

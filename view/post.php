@@ -42,7 +42,7 @@ if (@!$_SESSION['user']) {
  <tr>
     <td >  
       <input type="submit" name="submit" id="btn_enviar" value="Enviar">
-      <a href="index2.php">regresar</a>
+      <a href="index2.php">cancelar</a>
     </td>
   </tr>
    
