@@ -1,42 +1,45 @@
 
 <!DOCTYPE html>
 <html>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 <head>
 	<title>Login</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	
 </head>
 <body>
-   <center>
-		<div class="container-fluid">
+   
+</div>
+<div class="container-fluid">
+     <center>
 	<div class="row">
 		<div class="col-md-12">
 			<form role="form" action="../model/validar.php" method="post">
 				<div class="form-group">
 					 
-					<label for="exampleInputEmail1">
-					Correo:
+					<label for="exampleInputEmail1" > 
+						Email address:
 					</label>
-					<input class="form-group has-success"  type="text" name="mail"placeholder=" Correo" >
+					<input type="email" name="mail" class="form-control" id="exampleInputEmail1" />
 				</div>
 				<div class="form-group">
 					 
 					<label for="exampleInputPassword1">
-					Contraseña:
+						Contraseña:
 					</label>
-					<input type="password" name="pass" placeholder=" Contraseña">
+					<input type="password"name="pass" class="form-control" id="exampleInputPassword1" />
 				</div>
 				
 				<button type="submit" class="btn btn-primary">
-					ingresar
+					Ingresar
 				</button>
-				<button  class="btn btn-primary"> <a href="../index.php">Regresar</a>
-					
-				</button>
-			</form>
+			</form> 
+			<button type="button" class="btn btn-secondary " >
+			<a href="../index.php">
+			Regresar
+			</button>
 		</div>
-	</div>
-	</center>
+		</center>
 </div>
-
 </body>
 </html>

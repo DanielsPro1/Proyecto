@@ -1,19 +1,12 @@
 <div class="Editar">
 <?php
 
-
-
 	$sql=("SELECT * FROM `publicaciones`ORDER BY `id` DESC");
 
-				
-
 			
-
-	
-//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
 				$query=mysqli_query($mysqli,$sql);
 
-				echo "<table border='1'; class='table table-hover';>";
+				echo "<table border='1'; class='table table-hover'>";
 					echo "<tr class='warning'>";
 					
 
@@ -28,16 +21,19 @@
 					$ressql=mysqli_query($mysqli,$sql2);
 					while ($row=mysqli_fetch_row ($ressql)){
 		    	$d=$row[0];
-		    	$user=$row[1];
+				$user=$row[1];
+				$apellido=$row[2];
 		    }
-					  echo "<tr class='success'>";
-					  echo "<td>titulo: $arreglo[2] "." usuario: $user "." fecha: $arreglo[4]</td>";
+					  echo "<tr class=''>";
+					  echo "<td> Usuario: $user "." $apellido  "." <br> $arreglo[4]<br></td>";
 						echo "<tr></tr>"; 
-				    	echo "<td>$arreglo[3]</td>";
-				    	if (!empty($_SESSION['id'])) {
+						echo "<td>Titulo:"." $arreglo[2] "."<br>$arreglo[3] </td>";
+						if (!empty($_SESSION['id'])) {
 							if(($_SESSION['id']==$arreglo[1])) {
-				    	echo "<td><a href='../view/editarp.php?id=$arreglo[0]'>editar</td>";
-						echo "<td><a href='../view/index2.php?id=$arreglo[0]&idborrar=2'>eliminar</a></td>";
+								echo "<tr></tr>"; 
+						echo "<td><button type='button' class='btn btn-success'><a href='../view/editarp.php?id=$arreglo[0]'>editar</a></botton></td>";
+						echo "<tr></tr><br>"; 
+						echo "<td><button type='button' class='btn btn-success'><a href='../view/index2.php?id=$arreglo[0]&idborrar=2'>eliminar</a></botton></td>";
 						}}
 
 						

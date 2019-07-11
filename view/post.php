@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="../css/styless.css">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 <?php
 session_start();
 if (@!$_SESSION['user']) {
@@ -12,7 +14,7 @@ if (@!$_SESSION['user']) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
 </head>
 
 <body>
@@ -41,14 +43,31 @@ if (@!$_SESSION['user']) {
 
  <tr>
     <td >  
-      <input type="submit" name="submit" id="btn_enviar" value="Enviar">
-      <a href="index2.php">cancelar</a>
+    <button type="submit" class="btn btn-primary"name="submit" id="btn_enviar" value="Enviar" >
+					Publicar
+				</button>
+        
+		<div class="col-md-12">
+			 
+			<button type="button" class="btn btn-success btn-md">
+			<a href="index2.php">Cancelar</a>
+			</button>
+		</div>
+	</div>
+      
     </td>
   </tr>
    
 
 </table>
 </form>
+
+
+				
+			</form>
+		</div>
+	</div>
+</div>
 <?php
 		if(isset($_POST['submit'])){
 			require("../model/publicar.php");

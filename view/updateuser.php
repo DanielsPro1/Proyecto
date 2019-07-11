@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="../css/styless.css">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<?php
 	session_start();
 	$x= $_SESSION['id'];
@@ -13,33 +15,40 @@
 </head>
 <body>
 	
-
-<!-- ======================================================================================================================== -->
 <div class="Editar">
-<?php
+
+   </div>
+
+
+			<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table">
+
+			<?php
 
 				require("../conexion/connect.php");
 				$sql=("SELECT * FROM `login` WHERE `id` = $x");
 	
-//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
 				$query=mysqli_query($mysqli,$sql);
 
-				echo "<table border='1'; class='table table-hover';>";
-					echo "<tr class='warning'>";
+				echo "<class='table table-hover';>";
+					echo "<thead class='warning'>";
 						
-						echo "<td>Usuario</td>";
-						echo "<td>apellido</td>";
-						echo "<td>Password</td>";
-						echo "<td>Correo</td>";
-						echo "<td>direccion</td>";
-						echo "<td>Editar</td>";
-					echo "</tr>";
+						echo "<th>Usuario</th>";
+						echo "<th>apellido</th>";
+						echo "<th>Password</th>";
+						echo "<th>Correo</th>";
+						echo "<th>direccion</th>";
+						
+					echo "</thead>";
 
 			    
 			?>
 
-			<?php 
+<?php 
 				 while($arreglo=mysqli_fetch_array($query)){
+					
 				  	echo "<tr class='success'>";
 				    	
 				    	echo "<td>$arreglo[1]</td>";
@@ -49,14 +58,18 @@
 				    	echo "<td>$arreglo[5]</td>";
 				    	
 
-				    	echo "<td><a href='update.php?id=$arreglo[0]'>editar</td>";
+				    	echo "<td><button type='button' class='btn btn-success'><a href='update.php?id=$arreglo[0]'>editar</a></button></td>";
 						
 						
 
 						
-					echo "</tr>";
-				}					
-			?>
-			</div>
+					echo "</tr>";	}					
+					?>
+				
+				
+			</table>
+		</div>
+	</div>
+</div>
 </body>
 </html>

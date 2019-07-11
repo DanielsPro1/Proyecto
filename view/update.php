@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="../css/styless.css">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 <?php
 session_start();
 if (@!$_SESSION['user']) {
@@ -34,12 +36,11 @@ if (@!$_SESSION['user']) {
 		<div class="well well-small">
 		<hr class="soft"/>
 		<h4>Edición de usuarios</h4>
-		<div class="row-fluid">
+		
 		
 		<?php
 		extract($_GET);
 		require("../conexion/connect.php");
-
 		$sql="SELECT * FROM login WHERE id=$id";
 	//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
 		$ressql=mysqli_query($mysqli,$sql);
@@ -50,47 +51,84 @@ if (@!$_SESSION['user']) {
 		    	$pass=$row[3];
 		    	$email=$row[4];
 		    	$direccion=$row[5];
-
 		    }
-
-
-
 		?>
+        <center>
 
-		<form action="../model/updatebd.php" method="post">
-				Id<br><input type="text" name="id" value= "<?php echo $id ?>" readonly="readonly"><br>
-				Usuario<br> <input type="text" name="user" value="<?php echo $user?>"><br>
-				apellido<br> <input type="text" name="apellido" value="<?php echo $apellido?>"><br>
-				Password usuario<br> <input type="text" name="pass" value="<?php echo $pass?>"><br>
-				Correo usuario<br> <input type="text" name="email" value="<?php echo $email?>"><br>
-				direccion<br> <input type="text" name="direccion" value="<?php echo $direccion?>"/>
+			<div class="row">
+		<div class="col-md-12">
+			<form action="../model/updatebd.php" method="post" role="form">
+				<div class="form-group">
+					 
+					<label for="exampleInputEmail1">
+					id<br><input type="text" name="id" value= "<?php echo $id ?>" readonly="readonly"><br>
+					</label>
+					
+				</div>
+				<div class="form-group">
+					 
+					<label for="exampleInputPassword1">
+					Usuario<br> <input type="text" name="user" value="<?php echo $user?>"><br>
+					
+					</label>
+					
+				</div>
+				<div class="form-group">
+					 
+					<label for="exampleInputPassword1">
+					
+					apellido<br> <input type="text" name="apellido" value="<?php echo $apellido?>"><br>
+					</label>
+					
+				</div>
+				<div class="form-group">
+					 
+					<label for="exampleInputPassword1">
+					Password usuario<br> <input type="text" name="pass" value="<?php echo $pass?>"><br>
+					
+					</label>
+					
+				</div>
+				<div class="form-group">
+					 
+					 <label for="exampleInputPassword1">
+					 Correo usuario<br> <input type="text" name="email" value="<?php echo $email?>"><br>
+					 </label>
+					 
+				 </div>
+				 <div class="form-group">
+					 
+					 <label for="exampleInputPassword1">
+					 direccion<br> <input type="text" name="direccion" value="<?php echo $direccion?>"/><br>
+					 </label>
+					 
+				 </div>
 
-				<br>
+				
+				 <div class="form-group">
+					
+				<button type="submit" class="btn btn-primary">
+				Guardar
+				</button>
+			</form> 
+			<button type="button" class="btn btn-success">
+			<a href="../view/index2.php">Cancelar</a>
+			</button>
+		</div>
+	</div>	  
+	</center>
+		
 			
-				<input type="submit" value="Guardar" class="btn btn-success btn-primary">
-				<a href="../view/index2.php">cancelar</a>
-			</form>
-
-				  
-		
-		
-		<div class="span8">
-		
-		</div>	
-
-		</div>	
 		<br/>
 		</div>
-<!--///////////////////////////////////////////////////Termina cuerpo del documento interno////////////////////////////////////////////-->
+
 </div>
 
 	</div>
 </div>
 
-<
+
 </div><!-- /container -->
 
   </body>
 </html>
-
-
